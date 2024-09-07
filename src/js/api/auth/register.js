@@ -23,6 +23,8 @@ export async function register({
       throw new Error(`Registration failed: ${error.message}`);
     }
 
+    window.location.pathname = './login.html';
+
     const data = await response.json();
     console.log('Registration successful!', data);
   } catch(error) {
