@@ -1,6 +1,8 @@
 // This function controls which JavaScript file is loaded on which page
 // In order to add additional pages, you will need to implement them below
 // You may change the behaviour or approach of this file if you choose
+import { readPosts } from "../api/post/read.js";
+
 export default async function router(pathname = window.location.pathname) {
   switch (pathname) {
     case "/index.html":
@@ -17,6 +19,9 @@ export default async function router(pathname = window.location.pathname) {
       break;
     case "/post/index.html":
       await import("./views/post.js");
+      break;
+    case "/post/listing.html":
+      await readPosts();
       break;
     case "/post/edit/index.html":
       await import("./views/postEdit.js");
