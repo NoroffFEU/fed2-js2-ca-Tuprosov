@@ -9,9 +9,8 @@ export function displayPosts(data){
         // Assuming each post has properties like 'title', 'body', and 'author'
         li.innerHTML = `
             <h3>${post.title}</h3>
-            <img src="${media.url}" alt="${media.alt}">
+            <img src="${post.media.url}" alt="${post.media.alt}">
             <p>${post.body}</p>
-            <small>By: ${post.author}</small>
         `;
 
         // Append the list item to the unordered list
