@@ -7,8 +7,7 @@ export function displayPosts(data){
     // Loop through the data array and create list items for each post
     data.forEach(post => {
         const li = document.createElement('li');
-        li.setAttribute('id', `${data.post.id}`)
-
+        li.setAttribute('id', `${post.id}`)
         // Assuming each post has properties like 'title', 'body', and 'author'
         li.innerHTML = `
             <h3>${post.title}</h3>
