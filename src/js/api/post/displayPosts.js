@@ -1,6 +1,8 @@
 export function displayPosts(data){
     const ul = document.getElementById('postsList');
+    ul.style.listStyle = 'none';
     ul.innerHTML = '';
+    console.log(data)
 
     // Loop through the data array and create list items for each post
     data.forEach(post => {
@@ -9,7 +11,6 @@ export function displayPosts(data){
         // Assuming each post has properties like 'title', 'body', and 'author'
         li.innerHTML = `
             <h3>${post.title}</h3>
-            <img src="${post.media.url}" alt="${post.media.alt}">
             <p>${post.body}</p>
         `;
 
