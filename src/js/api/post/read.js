@@ -5,8 +5,12 @@ import { displayPosts } from "./displayPosts.js";
 export async function readPost(id) {}
 
 export async function readPosts(limit = 12, page = 1, sortOrder = "desc") {
+    const url = new URL(API_SOCIAL_POSTS);
+    url.searchParams.append('limit', limit);
+    url.searchParams.append('page', page);
+    url.searchParams.append('sortOrder', sortOrder);
     try {
-        const response = await fetch(API_SOCIAL_POSTS, {
+        const response = await fetch(url, {
            method: "GET",
            headers: headers(),
         })
@@ -17,7 +21,8 @@ export async function readPosts(limit = 12, page = 1, sortOrder = "desc") {
         }
 
         const data = await response.json();
-        displayPosts(data);
+        console.log(typeof data.data)
+        displayPosts(data.data);
 
     } catch (error) {
         console.error('Error getting post', error);
