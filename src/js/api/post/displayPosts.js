@@ -19,6 +19,8 @@ export function displayPosts(data){
             <h3>${post.title}</h3>
             <img src="${post.media.url}" alt="${post.media.alt}">
             <p>${post.body}</p>
+            <button id="Edit">Edit post</button>
+            <button id="Delete">Delete post</button>
         `;
 
         // set event listener
@@ -52,7 +54,7 @@ export function displayTargetPost(post){
     if (!post.media) {
         createMedia(post)
     }
-    
+
     img.src = post.media.url;
     img.alt = post.media.alt;
     
