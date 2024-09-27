@@ -1,4 +1,5 @@
 import { saveInLocalStorage } from "../../utilities/savePost.js";
+import { deletePost } from "./delete.js";
 
 export function displayPosts(data){
     const ul = document.getElementById('postsList');
@@ -39,6 +40,16 @@ export function displayPosts(data){
             event.stopPropagation();
             saveInLocalStorage(post)
             window.location.href = `edit/index.html?id=${post.id}`
+        })
+
+        deleteBtn.addEventListener('click', () => {
+            event.stopPropagation();
+            const confirmed = confirm('Are you sure you want to delete this post?')
+            if(confirmed) {
+                deletePost(post.id);
+            }else {
+                alert('Deletion cancelled')
+            }
         })
 
         // append buttons to li

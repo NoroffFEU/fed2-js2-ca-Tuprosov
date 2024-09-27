@@ -11,7 +11,7 @@ export async function readPost(id) {
             headers: headers()
         })
 
-        if (! response.ok) {
+        if (!response.ok) {
             const error = await response.json();
             throw new Error(`Error displaying the post: ${
                 error.message
