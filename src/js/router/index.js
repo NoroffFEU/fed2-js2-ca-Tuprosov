@@ -4,6 +4,7 @@
 import { readPosts } from "../api/post/read.js";
 
 export default async function router(pathname = window.location.pathname) {
+  const pathname = window.location.hash.replace('#', '') || '/';
   switch (pathname) {
     case "/":
     case "/index.html":
