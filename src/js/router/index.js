@@ -6,7 +6,7 @@ import { readPosts } from "../api/post/read.js";
 export default async function router(pathname = window.location.pathname) {
   const base = '/fed2-js2-ca-Tuprosov'
   switch (pathname) {
-    case '/':
+    case base:
     case `${base}/index.html`:
       await import("./views/home.js");
       break;
