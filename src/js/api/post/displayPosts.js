@@ -33,13 +33,13 @@ export function displayPosts(data){
     
         // set event listeners
         li.addEventListener('click', () => {
-            window.location.href = `index.html?id=${post.id}`
+            window.location.href = `../index.html?id=${post.id}`
         })
 
         editBtn.addEventListener('click', () => {
             event.stopPropagation();
             saveInLocalStorage(post)
-            window.location.href = `edit/index.html?id=${post.id}`
+            window.location.href = `../edit/index.html?id=${post.id}`
         })
 
         deleteBtn.addEventListener('click', () => {
