@@ -7,34 +7,34 @@ export default async function router(pathname = window.location.hash.replace('#'
 
   switch (pathname) {
     case "/":
-    case "/index.html":
+    case "./index.html":
       await import("./views/home.js");
       break;
-    case "/auth/login":
-    case "/auth/login/index.html":
+    case "./auth/login":
+    case "./auth/login/index.html":
       await import("./views/login.js");
       break;
-    case "/auth/register":
-    case "/auth/register/index.html":
+    case "./auth/register":
+    case "./auth/register/index.html":
       await import("./views/register.js");
       break;
-    case "/post":
-    case "/post/index.html":
+    case "./post":
+    case "./post/index.html":
       await import("./views/post.js");
       break;
-    case "/post/listing":
+    case "./post/listing":
       await readPosts();
       break;
-    case "/post/edit":
-    case "/post/edit/index.html":
+    case "./post/edit":
+    case "./post/edit/index.html":
       await import("./views/postEdit.js");
       break;
-    case "/post/create":
-    case "/post/create/index.html":
+    case "./post/create":
+    case "./post/create/index.html":
       await import("./views/postCreate.js");
       break;
-    case "/profile":
-    case "/profile/index.html":
+    case "./profile":
+    case "./profile/index.html":
       await import("./views/profile.js");
       break;
     default:
