@@ -3,7 +3,7 @@
 // You may change the behaviour or approach of this file if you choose
 import { readPosts } from "../api/post/read.js";
 
-export default async function router(pathname = window.location.hash.replace('#', '') || '/') {
+export default async function router(pathname = window.location.pathname) {
 
   switch (pathname) {
     case "/":
