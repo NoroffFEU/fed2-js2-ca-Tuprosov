@@ -3,16 +3,12 @@
 // You may change the behaviour or approach of this file if you choose
 import { readPosts } from "../api/post/read.js";
 
-export default async function router() {
-  const pathname = window.location.hash.replace('#', '') || '/';
+export default async function router(pathname = window.location.hash.replace('#', '') || '/') {
+
   switch (pathname) {
     case "/":
     case "/index.html":
       await import("./views/home.js");
-      break;
-    case "/auth":
-    case "/auth/index.html":
-      await import("./views/auth.js");
       break;
     case "/auth/login":
     case "/auth/login/index.html":
