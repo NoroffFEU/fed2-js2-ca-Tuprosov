@@ -22,7 +22,7 @@ export default async function router(pathname = window.location.pathname) {
     case `${base}/post/index.html`:
       await import("./views/post.js");
       break;
-    case `${base}/post/listing`:
+    case `${base}/post/listing/listing.html`:
       await readPosts();
       break;
     case `${base}/post/edit`:
