@@ -25,7 +25,7 @@ export async function login({ email, password }) {
         console.log('Login successful!', data);
         
         // redirect to home page;
-        window.location.pathname = '/index.html';
+        window.location.pathname = '/fed2-js2-ca-Tuprosov/index.html';
 
       } catch(error) {
         console.error('Error during login:', error);
