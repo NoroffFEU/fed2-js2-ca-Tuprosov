@@ -2,6 +2,7 @@ import { resolve } from "path";
 import { defineConfig } from "vite";
 
 export default defineConfig({
+  base: '/fed2-js2-ca-Tuprosov',
   appType: "mpa",
   build: {
     rollupOptions: {
@@ -14,6 +15,7 @@ export default defineConfig({
         post: resolve(__dirname, "./post/index.html"),
         editPost: resolve(__dirname, "./post/edit/index.html"),
         createPost: resolve(__dirname, "./post/create/index.html"),
+        listing: resolve(__dirname, "./post/listing.html"),
       },
     },
   },
