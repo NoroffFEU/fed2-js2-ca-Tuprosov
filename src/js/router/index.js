@@ -4,37 +4,37 @@
 import { readPosts } from "../api/post/read.js";
 
 export default async function router(pathname = window.location.pathname) {
-
+  const base = '/fed2-js2-ca-Tuprosov'
   switch (pathname) {
-    case "/":
-    case "./index.html":
+    case '/':
+    case `${base}/index.html`:
       await import("./views/home.js");
       break;
-    case "./auth/login":
-    case "./auth/login/index.html":
+    case `${base}/auth/login`:
+    case `${base}/auth/login/index.html`:
       await import("./views/login.js");
       break;
-    case "./auth/register":
-    case "./auth/register/index.html":
+    case `${base}/auth/register`:
+    case `${base}/auth/register/index.html`:
       await import("./views/register.js");
       break;
-    case "./post":
-    case "./post/index.html":
+    case `${base}/post`:
+    case `${base}/post/index.html`:
       await import("./views/post.js");
       break;
-    case "./post/listing":
+    case `${base}/post/listing`:
       await readPosts();
       break;
-    case "./post/edit":
-    case "./post/edit/index.html":
+    case `${base}/post/edit`:
+    case `${base}/post/edit/index.html`:
       await import("./views/postEdit.js");
       break;
-    case "./post/create":
-    case "./post/create/index.html":
+    case `${base}/post/create`:
+    case `${base}/post/create/index.html`:
       await import("./views/postCreate.js");
       break;
-    case "./profile":
-    case "./profile/index.html":
+    case `${base}/profile`:
+    case `${base}/profile/index.html`:
       await import("./views/profile.js");
       break;
     default:
