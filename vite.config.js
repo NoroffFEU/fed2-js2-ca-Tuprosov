@@ -4,7 +4,9 @@ import { defineConfig } from "vite";
 export default defineConfig({
   base: '/fed2-js2-ca-Tuprosov',
   appType: "mpa",
+  base: "",
   build: {
+    target: "esnext",
     rollupOptions: {
       input: {
         main: resolve(__dirname, "./index.html"),
